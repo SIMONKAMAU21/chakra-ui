@@ -1,8 +1,21 @@
-import { Avatar, AvatarGroup, Box, Text } from '@chakra-ui/react'
-import React from 'react'
+import { Avatar, AvatarGroup, Box, Image, Text, useStatStyles } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const Home = () => {
+  const [userData,setUserData]=useState([])
+  useEffect(()=>{
+    axios.get('https://jsonplaceholder.typicode.com/photos')
+    .then(function(response){
+      console.log('response', response);
+      setUserData(response.data);
+    })
+    .catch(function(){
+      console.log('error', error)
+    })
+  })
   return (
+   <>
     <Box bg='orange' p='10px'>
       <Text>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla odit error in quidem at culpa, perferendis tempore ipsum magni debitis sint facilis molestiae earum impedit ut exercitationem fugiat laudantium eos cupiditate deserunt aut nam repellendus. Provident ullam corrupti adipisci voluptas, sed eum quo natus accusamus fugiat, excepturi temporibus nostrum id?
@@ -16,6 +29,11 @@ const Home = () => {
         <Avatar name='naomi gatuma'/>
       </AvatarGroup>
     </Box>
+    <Box display='flex' flexDirection='column'>
+      {userData.map(user=>(
+        <Image src={user.url} alt='images'/>
+      ))}
+    </Box></>
   )
 }
 

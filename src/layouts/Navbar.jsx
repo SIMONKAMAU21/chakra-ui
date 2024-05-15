@@ -23,9 +23,10 @@ const Navbar = () => {
    }
    return (
       <Box bg= 'rgba(0, 0, 124, 1)'
-      p='10px' display='flex' justifyContent='space-between' >
+      p='10px' display='flex' justifyContent='space-between'>
          <Box sx={text}>
-            <Text sx={s}>S</Text>imon
+            <Text sx={s}>S</Text>
+            {/* <Text fontFamily='monospace'>imon</Text> */}
             <Text sx={s}>K</Text>
             amau
          </Box>
