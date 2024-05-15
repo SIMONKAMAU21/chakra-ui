@@ -1,8 +1,11 @@
 import React from 'react'
+import Images from '../components/images/Images'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <Images/>
+    </div>
   )
 }
 

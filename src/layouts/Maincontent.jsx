@@ -15,7 +15,7 @@ const Maincontent = () => {
         <Navbar />
         <HStack align="start" spacing={0}>
           <Sidebar />
-          <Box flex="1" p={4}>
+          <Box flex="2" p={4} ml='20%' mt='60px'w='850px' overflow='hidden' >
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path='/about' element={<About />} />

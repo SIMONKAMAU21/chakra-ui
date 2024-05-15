@@ -4,15 +4,18 @@ import { NavLink } from 'react-router-dom';
 import { InfoIcon, SettingsIcon, EmailIcon, StarIcon } from '@chakra-ui/icons';
 import { FaHome } from 'react-icons/fa'; 
 
-
 const Sidebar = () => {
    const navigationStyles = {
-      margin: '10px 0',
-      boxShadow: "5px 5px 10px rgba(0,0,0,0.25)",
+      position: 'fixed',
+      top: 0,
+      left: 0,
       height: '100vh',
+      marginTop:'60px',
       width: "20%",
       padding: '10px',
-      wrap:'wrap'
+      boxShadow: "5px 5px 10px rgba(0,0,0,0.25)",
+      backgroundColor: 'white', 
+      zIndex: 500, 
    };
 
    const linkStyles = {
@@ -21,6 +24,7 @@ const Sidebar = () => {
       borderRadius: '4px',
       margin: '5px 0',
       textDecoration: 'none',
+      color: 'black', 
    };
 
    const activeLinkStyles = {
