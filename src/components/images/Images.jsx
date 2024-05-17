@@ -27,12 +27,12 @@ const Images = () => {
    }, []);
   return (
     <Box >
-         <Box display='flex' boxSize='md' p='10px' gap='10px' mt='10px'  overflow='auto' w='99%' justifyContent='space-around' boxShadow='5px 0px 5px 0px rgba(0,0,0,0.25)'>
+         <Box display='flex'  boxSize='md' p='10px' gap='10px' mt='10px' bgGradient='linear(to-r,aliceblue,orange,aliceblue)' overflow='auto' w='99%' justifyContent='space-around' boxShadow='5px 0px 5px 0px rgba(0,0,0,0.25)'>
         {loading ? (
           <Spinner size='xl' thickness='4px' color='blue.500' emptyColor='gray.200'/>
         ) : (
           userData.map((url, index) => (
-            <Image key={index} src={url} alt={`Random image ${index + 1}`} objectFit='cover'  boxShadow='5px 0px 5px 0px rgba(0,0,0,0.25)'/>
+            <Image key={index} src={url} alt={`image ${index + 1}`} objectFit='cover'  boxShadow='5px 0px 5px 0px rgba(0,0,0,0.25)'/>
           ))
         )}
       </Box>

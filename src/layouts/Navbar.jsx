@@ -1,4 +1,4 @@
-import { Container, Flex, Text, Box, Button, Avatar, HStack, AvatarBadge } from '@chakra-ui/react'
+import { Text, Box, Button, Avatar, HStack, AvatarBadge } from '@chakra-ui/react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -32,9 +32,11 @@ const Navbar = () => {
          zIndex='1000'
       >
          <Box sx={text}>
-            <Text sx={s}>S</Text>
-            <Text sx={s}>K</Text>
-            amau
+            <Text sx={s}
+            >S</Text>
+            <Text
+               sx={s}>K</Text>
+            <Text >amau</Text>
          </Box>
          <Box>
             <HStack>
