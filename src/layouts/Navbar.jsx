@@ -26,7 +26,7 @@ const Navbar = () => {
          p='10px'
          display='flex'
          justifyContent='space-between'
-         position='fixed'
+         position='absolute'
          top={0}
          width='100%'
          zIndex='1000'
