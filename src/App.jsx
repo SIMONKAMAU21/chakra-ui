@@ -1,5 +1,4 @@
 
-import { Flex, HStack } from '@chakra-ui/react'
 import './App.css'
 import Maincontent from './layouts/Maincontent'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
