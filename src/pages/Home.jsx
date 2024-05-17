@@ -1,13 +1,16 @@
-import { Avatar, AvatarGroup, Box, Image, Spinner, Text } from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react';
+import { Avatar, AvatarGroup, Box,  Text ,useColorMode, useTheme} from '@chakra-ui/react';
+import React from 'react';
 import Images from '../components/images/Images';
 
 const Home = () => {
+  const {colorMode}=useColorMode()
+  const isDark=colorMode==='dark'
+  
 
 
   return (
-    <Box gap='10px'>
-      <Box bg='orange' p='10px'>
+    <Box >
+      <Box bg={isDark?"orange.300":'orange.300'} p='10px'>
         <Text>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla odit error in quidem at culpa, perferendis tempore ipsum magni debitis sint facilis molestiae earum impedit ut exercitationem fugiat laudantium eos cupiditate deserunt aut nam repellendus. Provident ullam corrupti adipisci voluptas, sed eum quo natus accusamus fugiat, excepturi temporibus nostrum id?
         </Text>

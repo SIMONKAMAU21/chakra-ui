@@ -1,10 +1,14 @@
-import { Text, Box, Button, Avatar, HStack, AvatarBadge } from '@chakra-ui/react'
+import { Text, Box, Button, Avatar, HStack, AvatarBadge, IconButton, useColorMode, useTheme } from '@chakra-ui/react'
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
    const navigate = useNavigate()
-   const text = {
+   const { colorMode, toggleColorMode } = useColorMode()
+   const theme = useTheme()
+
+   const textStyles = {
       color: "white",
       fontWeight: "600",
       display: 'flex',
@@ -12,42 +16,48 @@ const Navbar = () => {
       letterSpacing: '2px',
       flex: '1'
    }
-   const s = {
-      color: 'orange',
+   
+   const sStyles = {
+      color: theme.colors.accent.light,
       fontWeight: '900',
       fontSize: '35px'
    }
+
    const handleLogout = () => {
       navigate('/')
    }
+
    return (
       <Box
-         bg='rgba(0, 0, 124, 1)'
+         bg={colorMode === 'light' ? theme.colors.primary.light : theme.colors.primary.dark}
          p='10px'
          display='flex'
          justifyContent='space-between'
-         position='absolute'
+         position='fixed'
          top={0}
          width='100%'
          zIndex='1000'
       >
-         <Box sx={text}>
-            <Text sx={s}
-            >S</Text>
-            <Text
-               sx={s}>K</Text>
-            <Text >amau</Text>
+         <Box sx={textStyles}>
+            <Text sx={sStyles}>S</Text>
+            <Text sx={sStyles}>K</Text>
+            <Text>amau</Text>
          </Box>
-         <Box>
-            <HStack>
-               <Avatar name='simon kamau gatuma' bg={s.color}>
-                  <AvatarBadge bg='teal' boxSize='1.2em' />
-               </Avatar>
-               <Button bg={s.color} color={text.color} onClick={handleLogout}>
-                  logout
-               </Button>
-            </HStack>
-         </Box>
+         <HStack>
+            <Avatar name='simon kamau gatuma' bg={theme.colors.accent.light}>
+               <AvatarBadge bg='teal' boxSize='1.2em' />
+            </Avatar>
+            <Button bg={theme.colors.accent.light} color={textStyles.color} onClick={handleLogout}>
+               Logout
+            </Button>
+            <IconButton
+               aria-label='Toggle color mode'
+               icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+               onClick={toggleColorMode}
+               bg={theme.colors.accent.light}
+               color={textStyles.color}
+            />
+         </HStack>
       </Box>
    )
 }
