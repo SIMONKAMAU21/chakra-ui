@@ -60,7 +60,7 @@ const Sidebar = () => {
                      <Box mb={2} textAlign="center">
                         NO RESULTS FOUND <SearchIcon boxSize={6} />
                      </Box>
-                     <Image src='https://img.freepik.com/free-vector/blogging-concept-illustration_114360-1038.jpg?t=st=1715967895~exp=1715971495~hmac=97ae457b98e5057782ce9ac471c27057b89562d7d27775a55975ae7b8248e180&w=826' />
+                    {isDark ?<Image src='https://img.freepik.com/free-vector/abstract-blue-circle-black-background-technology_1142-10027.jpg?t=st=1715979920~exp=1715983520~hmac=38bf67bd4fc153e783c5a902901b1162f915c6091c9591ec467e181f2aae82b6&w=1380'/>   : <Image src='https://img.freepik.com/free-vector/blogging-concept-illustration_114360-1038.jpg?t=st=1715967895~exp=1715971495~hmac=97ae457b98e5057782ce9ac471c27057b89562d7d27775a55975ae7b8248e180&w=826' />}
                   </Box>
                   
                )}
