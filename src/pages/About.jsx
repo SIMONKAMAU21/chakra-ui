@@ -1,6 +1,6 @@
 import React from 'react'
 import Images from '../components/images/Images'
-import { Box, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Image, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react'
+import { Box, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Image, Tab, TabList, TabPanel, TabPanels, Tabs, Text, VStack } from '@chakra-ui/react'
 
 const About = () => {
   const heading = {
@@ -11,11 +11,12 @@ const About = () => {
     },
     overflow: "hidden",
     alignItems:"center",
+    flex:"1",
     justifyContent:'space-between',
     display:"flex",
     w:{
       base:'40%',
-      md:"50%",
+      md:"20%",
       sm:"30%"
     },
     h:{
@@ -38,7 +39,7 @@ const About = () => {
   }
 
   return (
-    <Box h='100vh' w='70vw' >
+    <Box h='100vh' w='80vw' >
       <Tabs>
         <TabList>
           <Tab>Blogs</Tab>
@@ -47,10 +48,11 @@ const About = () => {
 
         <TabPanels>
           <TabPanel>
-            <Flex gap='10px'display={heading.display} justifyContent={heading.justifyContent} >
+          <VStack>
+          <Flex gap='10px'display={heading.display} justifyContent={heading.justifyContent} >
               <Card sx={heading}>
                 <CardHeader>
-                  <Heading fontSize={heading.fontSize}>Lorem, ipsum dolor sit amet </Heading>
+                  <Heading fontSize={heading.fontSize}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam dolorem aliquam sed voluptatibus minima quia neque odit iusto molestiae. Minus! </Heading>
                 </CardHeader>
                 <CardBody>
                   <Flex gap='10px'>
@@ -64,7 +66,7 @@ const About = () => {
               </Card>
               <Card sx={heading}>
                 <CardHeader>
-                  <Heading fontSize={heading.fontSize}>Lorem, ipsum dolor sit amet </Heading>
+                  <Heading fontSize={heading.fontSize}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias repudiandae, iure dicta similique ea dignissimos corporis perferendis quasi assumenda. </Heading>
                 </CardHeader>
                 <CardBody>
                   <Flex gap='10px'>
@@ -76,11 +78,8 @@ const About = () => {
                   <Text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In numquam ullam dolore enim impedit est vero culpa assumenda voluptates iure? Aut doloribus, culpa inventore quas accusantium eaque minus neque excepturi expedita! Nemo earum officia corrupti dolor sit fugiat asperiores aspernatur voluptatum ipsam temporibus dignissimos, perspiciatis vero aperiam eos repudiandae modi magnam natus iusto maxime excepturi neque. Impedit voluptatibus sit provident qui aspernatur vitae, ipsa quos amet earum delectus aliquam vel?</Text>
                 </CardFooter>
               </Card>
-
-     
-
-
             </Flex>
+          </VStack>
           </TabPanel>
           <TabPanel>
             <Images />
