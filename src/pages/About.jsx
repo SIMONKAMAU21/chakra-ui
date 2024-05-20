@@ -89,7 +89,7 @@ const About = () => {
             <Card>
               <CardHeader>
                 <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est rem in itaque ipsa, incidunt, sapiente neque magni dolor atque beatae fuga voluptatem nisi tempora sed. Alias asperiores laudantium nam eum.
+                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate expedita ipsam cumque, esse fugit assumenda a ullam ut veritatis quod itaque unde ad quo sit magni. Esse consequatur labore repellat?
                 </Text>
               </CardHeader>
               <CardBody>
