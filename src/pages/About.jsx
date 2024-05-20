@@ -9,31 +9,31 @@ const About = () => {
       md: "18px",
       sm: "10px"
     },
-    alignItems:"center",
-    flex:"1",
-    justifyContent:'space-between',
-    display:"flex",
-    w:{
-      base:'40%',
-      md:"20%",
-      sm:"30%"
+    alignItems: "center",
+    flex: "1",
+    justifyContent: 'space-between',
+    display: "flex",
+    w: {
+      base: '40%',
+      md: "20%",
+      sm: "30%"
     },
-    h:{
-      base:"40%",
-      md:'30%',
-      sm:"30%"
+    h: {
+      base: "40%",
+      md: '30%',
+      sm: "30%"
     }
   }
-  const image={
-    w:{
-      base:"350px",
-      md:'550px',
-      sm:"250px"
+  const image = {
+    w: {
+      base: "350px",
+      md: '550px',
+      sm: "250px"
     },
-    h:{
-      base:"350px",
-      md:'350px',
-      sm:"250px"
+    h: {
+      base: "350px",
+      md: '350px',
+      sm: "250px"
     }
   }
 
@@ -47,53 +47,53 @@ const About = () => {
 
         <TabPanels>
           <TabPanel>
-          <VStack>
-          <Flex gap='10px'display={heading.display} justifyContent={heading.justifyContent} >
-              <Card sx={heading}>
-                <CardHeader>
-                  <Heading fontSize={heading.fontSize}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam dolorem aliquam sed voluptatibus minima quia neque odit iusto molestiae. Minus! </Heading>
-                </CardHeader>
-                <CardBody>
-                  <Flex gap='10px'>
-                    <Image src='https://picsum.photos/200/300?random=1' alt='my image' sx={image}/>
-                    <Image src='https://picsum.photos/200/300?random=2' alt='my image' sx={image}/>
-                  </Flex>
-                </CardBody>
-                <CardFooter>
-                  <Text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In numquam ullam dolore enim impedit est vero culpa assumenda voluptates iure? Aut doloribus, culpa inventore quas accusantium eaque minus neque excepturi expedita! Nemo earum officia corrupti dolor sit fugiat asperiores aspernatur voluptatum ipsam temporibus dignissimos, perspiciatis vero aperiam eos repudiandae modi magnam natus iusto maxime excepturi neque. Impedit voluptatibus sit provident qui aspernatur vitae, ipsa quos amet earum delectus aliquam vel?</Text>
-                </CardFooter>
-              </Card>
+            <VStack>
+              <Flex gap='10px' display={heading.display} justifyContent={heading.justifyContent} >
+                <Card sx={heading}>
+                  <CardHeader>
+                    <Heading fontSize={heading.fontSize}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam dolorem aliquam sed voluptatibus minima quia neque odit iusto molestiae. Minus! </Heading>
+                  </CardHeader>
+                  <CardBody>
+                    <Flex gap='10px'>
+                      <Image src='https://picsum.photos/200/300?random=1' alt='my image' sx={image} />
+                      <Image src='https://picsum.photos/200/300?random=2' alt='my image' sx={image} />
+                    </Flex>
+                  </CardBody>
+                  <CardFooter>
+                    <Text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In numquam ullam dolore enim impedit est vero culpa assumenda voluptates iure? Aut doloribus, culpa inventore quas accusantium eaque minus neque excepturi expedita! Nemo earum officia corrupti dolor sit fugiat asperiores aspernatur voluptatum ipsam temporibus dignissimos, perspiciatis vero aperiam eos repudiandae modi magnam natus iusto maxime excepturi neque. Impedit voluptatibus sit provident qui aspernatur vitae, ipsa quos amet earum delectus aliquam vel?</Text>
+                  </CardFooter>
+                </Card>
 
-              <Card sx={heading}>
-                <CardHeader>
-                  <Heading fontSize={heading.fontSize}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias repudiandae, iure dicta similique ea dignissimos corporis perferendis quasi assumenda. </Heading>
-                </CardHeader>
-                <CardBody>
-                  <Flex gap='10px'>
-                    <Image src='https://picsum.photos/200/300?random=3' alt='my image' w='650px' h='350px'/>
-                    <Image src='https://picsum.photos/200/300?random=4' alt='my image' w='650px' h='350px'/>
-                  </Flex>
-                </CardBody>
-                <CardFooter>
-                  <Text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolore, voluptatum nesciunt accusantium natus tempora. Quidem accusantium, est, ducimus optio eius nesciunt aut fugiat, consequuntur corrupti maxime magnam veniam doloremque adipisci hic delectus veritatis quod repellendus consequatur ratione vero explicabo.
+                <Card sx={heading}>
+                  <CardHeader>
+                    <Heading fontSize={heading.fontSize}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias repudiandae, iure dicta similique ea dignissimos corporis perferendis quasi assumenda. </Heading>
+                  </CardHeader>
+                  <CardBody>
+                    <Flex gap='10px'>
+                      <Image src='https://picsum.photos/200/300?random=3' alt='my image' w='650px' h='350px' />
+                      <Image src='https://picsum.photos/200/300?random=4' alt='my image' w='650px' h='350px' />
+                    </Flex>
+                  </CardBody>
+                  <CardFooter>
+                    <Text>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolore, voluptatum nesciunt accusantium natus tempora. Quidem accusantium, est, ducimus optio eius nesciunt aut fugiat, consequuntur corrupti maxime magnam veniam doloremque adipisci hic delectus veritatis quod repellendus consequatur ratione vero explicabo.
 
-                  </Text>
-                </CardFooter>
-              </Card>
-            </Flex>
-          </VStack>
+                    </Text>
+                  </CardFooter>
+                </Card>
+              </Flex>
+            </VStack>
           </TabPanel>
           <TabPanel>
             <Images />
             <Card>
               <CardHeader>
                 <Text>
-                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate expedita ipsam cumque, esse fugit assumenda a ullam ut veritatis quod itaque unde ad quo sit magni. Esse consequatur labore repellat?
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate expedita ipsam cumque, esse fugit assumenda a ullam ut veritatis quod itaque unde ad quo sit magni. Esse consequatur labore repellat?
                 </Text>
               </CardHeader>
               <CardBody>
-                <Image/>
+                <Image />
               </CardBody>
               <CardFooter></CardFooter>
             </Card>
