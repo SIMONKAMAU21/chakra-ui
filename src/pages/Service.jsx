@@ -7,8 +7,6 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Stack,
-  StackDivider,
   useColorMode,
   useColorModeValue
 } from '@chakra-ui/react';
@@ -45,7 +43,7 @@ const Service = () => {
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
   const cardBg = useColorModeValue('white', 'gray.700');
-  const textColor = useColorModeValue('gray.800', 'white');
+  const textColor = useColorModeValue('blue.600', 'white');
 
   return (
     <Box p={8}>
@@ -56,12 +54,12 @@ const Service = () => {
         {services.map((service) => (
           <Card key={service.key} bg={cardBg} boxShadow="md" borderRadius="md">
             <CardHeader>
-              <Heading as="h3" size="md" color={textColor}>
+              <Heading as="h3" size="md"  color={textColor}>
                 {service.title}
               </Heading>
             </CardHeader>
             <CardBody>
-              <Text color={textColor}>{service.description}</Text>
+              <Text >{service.description}</Text>
             </CardBody>
           </Card>
         ))}
