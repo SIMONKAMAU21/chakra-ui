@@ -75,7 +75,10 @@ const About = () => {
                   </Flex>
                 </CardBody>
                 <CardFooter>
-                  <Text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In numquam ullam dolore enim impedit est vero culpa assumenda voluptates iure? Aut doloribus, culpa inventore quas accusantium eaque minus neque excepturi expedita! Nemo earum officia corrupti dolor sit fugiat asperiores aspernatur voluptatum ipsam temporibus dignissimos, perspiciatis vero aperiam eos repudiandae modi magnam natus iusto maxime excepturi neque. Impedit voluptatibus sit provident qui aspernatur vitae, ipsa quos amet earum delectus aliquam vel?</Text>
+                  <Text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolore, voluptatum nesciunt accusantium natus tempora. Quidem accusantium, est, ducimus optio eius nesciunt aut fugiat, consequuntur corrupti maxime magnam veniam doloremque adipisci hic delectus veritatis quod repellendus consequatur ratione vero explicabo.
+
+                  </Text>
                 </CardFooter>
               </Card>
             </Flex>
