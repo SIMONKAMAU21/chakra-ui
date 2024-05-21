@@ -14,6 +14,7 @@ import {
   Text,
   useColorMode
 } from '@chakra-ui/react';
+import simon from '../assets/simo.jpg'
 
 const scrollBoxStyles = {
   display: 'flex',
@@ -35,7 +36,7 @@ const AccordionContent = ({ isDark }) => (
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla odit error in quidem at culpa, perferendis tempore ipsum magni debitis sint facilis molestiae earum impedit ut exercitationem fugiat laudantium eos cupiditate deserunt aut nam repellendus. Provident ullam corrupti adipisci voluptas, sed eum quo natus accusamus fugiat, excepturi temporibus nostrum id?
     </Text>
     <AvatarGroup>
-      <Avatar name='simon kamau' src='https://picsum.photos/200/300?random=5' />
+      <Avatar name='simon kamau' src={simon} />
       <Avatar name='peninah gatuma' src='https://picsum.photos/200/300?random=6' />
       <Avatar name='naomi gatuma' src='https://picsum.photos/200/300?random=7' />
     </AvatarGroup>

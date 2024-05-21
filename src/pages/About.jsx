@@ -17,6 +17,7 @@ import {
   Text,
   VStack
 } from '@chakra-ui/react';
+import simon from '../assets/simo.jpg'
 
 const About = () => {
   const headingStyles = {
@@ -46,7 +47,7 @@ const About = () => {
           <Tab>Images</Tab>
         </TabList>
 
-        <TabPanels>
+        <TabPanels >
           <TabPanel>
             <VStack spacing={6}>
               <Card w='100%'>
@@ -58,7 +59,8 @@ const About = () => {
                 <CardBody>
                   <Flex flexDirection={{ base: 'column', md: 'row' }} gap='10px'>
                     <Image src='https://picsum.photos/200/300?random=1' alt='image 1' sx={imageStyles} />
-                    <Image src='https://picsum.photos/200/300?random=2' alt='image 2' sx={imageStyles} />
+                    <Image src={simon
+                    } alt='image 2' sx={imageStyles} />
                   </Flex>
                 </CardBody>
                 <CardFooter>

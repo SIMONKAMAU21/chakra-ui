@@ -44,7 +44,7 @@ const Navbar = () => {
             <Text>amau</Text>
          </Box>
          <HStack>
-            <Avatar name='simon kamau gatuma' src={simon} objectFit={'cover'} bg={theme.colors.accent.light}>
+            <Avatar name='simon kamau gatuma' src={simon} objectFit='cover' bg={theme.colors.accent.light}>
                <AvatarBadge bg='teal' boxSize='1.2em' />
             </Avatar>
             <Button bg={theme.colors.accent.light} color={textStyles.color} onClick={handleLogout}>
