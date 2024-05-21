@@ -12,7 +12,7 @@ const Sidebar = () => {
    const location = useLocation();
 
    const displayMode = useBreakpointValue({ base: 'none', md: 'block' });
-   const sidebarWidth = useBreakpointValue({ base: '100%', md: '20%' });
+   const sidebarWidth = useBreakpointValue({ base: '50%', md: '20%' });
 
    const navigationStyles = {
       position: 'fixed',
@@ -73,7 +73,8 @@ const Sidebar = () => {
             display={{ base: 'block', md: 'none' }}
             position="fixed"
             top="20px"
-            left="20px"
+            bg={isDark ? "orange.400": 'orange.400'}
+            left="120px"
             onClick={() => setIsOpen(!isOpen)}
             zIndex={1000}
          />
