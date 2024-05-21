@@ -49,7 +49,7 @@ const Contact = () => {
 
   return (
 <>
-<Box w={{ base: '90vw', md: '80vw', lg: '60vw' }} mx='auto' p={6} mt={4} borderWidth={1} borderRadius='lg' boxShadow='lg'>
+<Box w={{ base: '100vw', md: '80vw', lg: '60vw' }} mx='auto' p={6} mt={4} borderWidth={1} borderRadius='lg' boxShadow='lg'>
       <Heading as='h1' size='xl' textAlign='center' mb={6}>
         Contact Us
       </Heading>

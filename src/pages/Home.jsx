@@ -19,8 +19,8 @@ const Home = () => {
   };
 
   return (
-    <Box gap='10px' display='flex' flexDirection='column'>
-      <Card>
+    <Box  gap='10px' display='flex' flexDirection='column' w={{ base: "100vw", md: "100vw", sm:'100vw' }} p={{ base: "10px", md: "20px" }}>
+      <Card w="100%">
         <Text p='10px'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias optio, maxime, officiis suscipit nam eveniet quam perferendis, facere quos inventore. Deleniti optio, nisi itaque inventore quisquam libero eum ut recusandae aspernatur, sint, in eveniet maiores laudantium id. Ad praesentium accusamus aut minus inventore blanditiis beatae, possimus cumque vero iusto!
         </Text>
@@ -94,7 +94,7 @@ const Home = () => {
 
       <Divider />
 
-      <Card>
+      <Card w="100%">
         <Text p='10px'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolore ea quae, atque eaque repudiandae accusantium delectus velit quasi animi soluta nemo laboriosam repellat consequatur aspernatur, minima non quia, blanditiis architecto possimus voluptas a facilis magnam. Adipisci, provident voluptas tempore nostrum laboriosam voluptatibus inventore minima quas sunt quibusdam saepe eos quaerat consequuntur repellat voluptatum similique repudiandae ipsum enim qui eligendi.
         </Text>

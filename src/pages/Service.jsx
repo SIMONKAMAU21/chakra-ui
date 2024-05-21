@@ -46,7 +46,7 @@ const Service = () => {
   const textColor = useColorModeValue('blue.600', 'orange.400');
 
   return (
-    <Box p={8}>
+    <Box p={8} w={{base:'100vw'}}>
       <Heading as="h1" mb={8} textAlign="center" color={textColor}>
         Our Services
       </Heading>

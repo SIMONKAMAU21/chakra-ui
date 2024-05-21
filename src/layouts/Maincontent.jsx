@@ -7,26 +7,28 @@ import Service from '../pages/Service';
 import Contact from '../pages/Contact';
 import Portfolio from '../pages/Portfolio';
 import Sidebar from './Sidebar';
-import { HStack, Box } from '@chakra-ui/react';
+import { HStack, Box, useBreakpointValue } from '@chakra-ui/react';
 
 const Maincontent = () => {
-   return (
-      <>
-        <Navbar />
-        <HStack align="start" spacing={0}>
-          <Sidebar />
-          <Box flex="2" p={4} ml='20%' mt='60px'w='850px' overflow='hidden' >
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/services' element={<Service />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/portfolio' element={<Portfolio />} />
-            </Routes>
-          </Box>
-        </HStack>
-      </>
-   );
+  const marginLeft = useBreakpointValue({ base: '0', md: '20%' });
+
+  return (
+    <>
+      <Navbar />
+      <HStack align="start" spacing={0} mt="60px">
+        <Sidebar />
+        <Box flex="2" p={4} ml={marginLeft} w="100%" overflow="hidden">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Service />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+          </Routes>
+        </Box>
+      </HStack>
+    </>
+  );
 };
 
 export default Maincontent;

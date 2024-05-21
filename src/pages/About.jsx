@@ -39,7 +39,7 @@ const About = () => {
   };
 
   return (
-    <Box h='100vh' w='80vw' p={4} overflowY='auto'>
+    <Box h='100vh' w={{base:'100vw'}} p={4} overflowY='auto'>
       <Tabs>
         <TabList>
           <Tab>Blogs</Tab>
