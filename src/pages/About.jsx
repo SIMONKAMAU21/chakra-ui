@@ -39,7 +39,7 @@ const About = () => {
   };
 
   return (
-    <Box h='100vh' w={{base:'100vw'}} p={4} overflowY='auto'>
+    <Box h='100vh' w={{ base: '100vw', md: '80vw' }} p={4} overflowY='auto' >
       <Tabs>
         <TabList>
           <Tab>Blogs</Tab>
@@ -49,7 +49,7 @@ const About = () => {
         <TabPanels>
           <TabPanel>
             <VStack spacing={6}>
-              <Card>
+              <Card w='100%'>
                 <CardHeader>
                   <Heading sx={headingStyles}>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam dolorem aliquam sed voluptatibus minima quia neque odit iusto molestiae. Minus!
@@ -68,7 +68,7 @@ const About = () => {
                 </CardFooter>
               </Card>
 
-              <Card>
+              <Card w='100%'>
                 <CardHeader>
                   <Heading sx={headingStyles}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias repudiandae, iure dicta similique ea dignissimos corporis perferendis quasi assumenda.
@@ -90,7 +90,7 @@ const About = () => {
           </TabPanel>
           <TabPanel>
             <Images />
-            <Card>
+            <Card w='100%'>
               <CardHeader>
                 <Text>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate expedita ipsam cumque, esse fugit assumenda a ullam ut veritatis quod itaque unde ad quo sit magni. Esse consequatur labore repellat?
