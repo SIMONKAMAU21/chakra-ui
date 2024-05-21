@@ -29,7 +29,7 @@ const scrollBoxStyles = {
 };
 
 const AccordionContent = ({ isDark }) => (
-  <Box bg={isDark ? "" : 'gray.50'} p='10px'>
+  <Box bg={isDark ? "" : 'gray.50'} p='0px'>
     <Text bg={isDark ? "" : 'gray.150'} p='10px'>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit quos sapiente rerum suscipit repellendus doloremque dolores aspernatur illum harum dolor iste deserunt omnis consectetur consequuntur, cumque ratione! At, corrupti?
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla odit error in quidem at culpa, perferendis tempore ipsum magni debitis sint facilis molestiae earum impedit ut exercitationem fugiat laudantium eos cupiditate deserunt aut nam repellendus. Provident ullam corrupti adipisci voluptas, sed eum quo natus accusamus fugiat, excepturi temporibus nostrum id?
@@ -59,8 +59,8 @@ const Home = () => {
         <Accordion allowToggle>
           <AccordionItem>
             <h2>
-              <AccordionButton _expanded={{ bg: "green.100" }}>
-                <Box as='span' color={isDark ? 'orange' : 'blue'} flex='1' textAlign='left' fontSize='20px'>
+              <AccordionButton _expanded={{ bg: "orange.400" }}>
+                <Box as='span' color={isDark ? 'white' : 'black'} flex='1' textAlign='left' fontSize='20px'>
                   see more
                 </Box>
                 <AccordionIcon color={isDark ? 'orange' : 'blue'} />
@@ -72,8 +72,8 @@ const Home = () => {
           </AccordionItem>
           <AccordionItem>
             <h2>
-              <AccordionButton _expanded={{ bg: "green.100" }}>
-                <Box flex='1' textAlign='left' fontSize='20px' color={isDark ? 'orange' : "blue"}>
+            <AccordionButton _expanded={{ bg: "orange.400" }}>
+                <Box flex='1' textAlign='left' fontSize='20px' color={isDark ? 'white' : "black"}>
                   see more
                 </Box>
                 <AccordionIcon />
@@ -95,8 +95,8 @@ const Home = () => {
         <Accordion allowToggle>
           <AccordionItem>
             <h2>
-              <AccordionButton _expanded={{ bg: "green.100" }}>
-                <Box flex='1' textAlign='left' fontSize='20px' color={isDark ? 'orange' : "blue"}>
+            <AccordionButton _expanded={{ bg: "orange.400" }}>
+                <Box flex='1' textAlign='left' fontSize='20px' color={isDark ? 'white' : "black"}>
                   see more
                 </Box>
                 <AccordionIcon />
