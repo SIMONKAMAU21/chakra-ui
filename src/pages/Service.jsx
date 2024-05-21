@@ -43,7 +43,7 @@ const Service = () => {
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
   const cardBg = useColorModeValue('white', 'gray.700');
-  const textColor = useColorModeValue('blue.600', 'white');
+  const textColor = useColorModeValue('blue.600', 'orange.400');
 
   return (
     <Box p={8}>

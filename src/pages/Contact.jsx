@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack, Heading, Text, useToast } from '@chakra-ui/react';
+import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack, Heading, Text, useToast, HStack, IconButton, Link } from '@chakra-ui/react';
 import emailjs from '@emailjs/browser';
+import { FaFacebook, FaSms, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -47,13 +48,42 @@ const Contact = () => {
   };
 
   return (
-    <Box w={{ base: '90vw', md: '80vw', lg: '60vw' }} mx='auto' p={6} mt={4} borderWidth={1} borderRadius='lg' boxShadow='lg'>
+<>
+<Box w={{ base: '90vw', md: '80vw', lg: '60vw' }} mx='auto' p={6} mt={4} borderWidth={1} borderRadius='lg' boxShadow='lg'>
       <Heading as='h1' size='xl' textAlign='center' mb={6}>
         Contact Us
       </Heading>
       <Text fontSize='lg' textAlign='center' mb={6}>
         We would love to hear from you! Please fill out the form below to get in touch.
       </Text>
+      <Box mb='10px' display='flex' justifyContent='center'>
+       <HStack spacing={4} mt={6} justifyContent=''>
+        <Link href='https://wa.me/+254726613449' isExternal>
+          <IconButton
+            icon={<FaWhatsapp />}
+            // aria-label='WhatsApp'
+            colorScheme='whatsapp'
+            size='lg'
+          />
+        </Link>
+        <Link href='https://www.facebook.com/simo kamau' isExternal>
+          <IconButton
+            icon={<FaFacebook/>}
+            // aria-label='WhatsApp'
+            colorScheme='facebook'
+            size='lg'
+          />
+        </Link>
+        <Link href='sms:+254759717794' isExternal>
+          <IconButton
+            icon={<FaSms/>}
+            aria-label='SMS'
+            colorScheme='teal'
+            size='lg'
+          />
+        </Link>
+      </HStack>
+    </Box>
       <VStack spacing={4} as='form' onSubmit={handleSubmit}>
         <FormControl id='name' isRequired>
           <FormLabel>Name</FormLabel>
@@ -68,10 +98,13 @@ const Contact = () => {
           <Textarea placeholder='Your Message' rows={6} value={formData.message} onChange={handleChange} name='message' />
         </FormControl>
         <Button bg='orange.400' size='lg' w='full' type='submit'>
-          send
+          Send
         </Button>
       </VStack>
+     
     </Box>
+  
+</>
   );
 };
 
