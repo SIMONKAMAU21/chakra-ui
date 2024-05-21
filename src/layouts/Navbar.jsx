@@ -2,7 +2,7 @@ import { Text, Box, Button, Avatar, HStack, AvatarBadge, IconButton, useColorMod
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import simon from '../assets/simo.jpg'
 const Navbar = () => {
    const navigate = useNavigate()
    const { colorMode, toggleColorMode } = useColorMode()
@@ -44,7 +44,7 @@ const Navbar = () => {
             <Text>amau</Text>
          </Box>
          <HStack>
-            <Avatar name='simon kamau gatuma' bg={theme.colors.accent.light}>
+            <Avatar name='simon kamau gatuma' src={simon} objectFit={'cover'} bg={theme.colors.accent.light}>
                <AvatarBadge bg='teal' boxSize='1.2em' />
             </Avatar>
             <Button bg={theme.colors.accent.light} color={textStyles.color} onClick={handleLogout}>
