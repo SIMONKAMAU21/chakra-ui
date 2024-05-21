@@ -12,7 +12,7 @@ const Sidebar = () => {
    const location = useLocation();
 
    const displayMode = useBreakpointValue({ base: 'none', md: 'block' });
-   const sidebarWidth = useBreakpointValue({ base: '50%', md: '20%' });
+   const sidebarWidth = useBreakpointValue({ base: '70%', md: '20%' });
 
    const navigationStyles = {
       position: 'fixed',
