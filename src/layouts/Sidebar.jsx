@@ -1,6 +1,6 @@
-import { Box, HStack, List, ListItem, Icon, Input, InputGroup, InputRightElement, Image, useColorMode, useBreakpointValue, IconButton, VStack } from '@chakra-ui/react';
+import { Box, HStack, List, ListItem, Icon, Input, InputGroup, InputRightElement, IconButton, useColorMode, useBreakpointValue } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { InfoIcon, SettingsIcon, EmailIcon, StarIcon, SearchIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { FaHome } from 'react-icons/fa';
 
@@ -9,6 +9,7 @@ const Sidebar = () => {
    const { colorMode } = useColorMode();
    const isDark = colorMode === 'dark';
    const [isOpen, setIsOpen] = useState(false);
+   const location = useLocation();
 
    const displayMode = useBreakpointValue({ base: 'none', md: 'block' });
    const sidebarWidth = useBreakpointValue({ base: '100%', md: '20%' });
@@ -55,6 +56,16 @@ const Sidebar = () => {
 
    const filterItems = navItems.filter(item => item.label.toLowerCase().includes(searchQuery.toLowerCase()));
 
+   const handleLinkClick = () => {
+      if (displayMode === 'none') {
+         setIsOpen(false);
+      }
+   };
+
+   React.useEffect(() => {
+      setIsOpen(false);
+   }, [location]);
+
    return (
       <>
          <IconButton
@@ -74,13 +85,16 @@ const Sidebar = () => {
                         <Box mb={2} textAlign="center">
                            NO RESULTS FOUND <SearchIcon boxSize={6} />
                         </Box>
-                       
                      </Box>
                   )}
 
                   {filterItems.map((item) => (
                      <ListItem key={item.to}>
-                        <NavLink to={item.to} style={({ isActive }) => isActive ? { ...linkStyles, ...activeLinkStyles } : linkStyles}>
+                        <NavLink
+                           to={item.to}
+                           style={({ isActive }) => isActive ? { ...linkStyles, ...activeLinkStyles } : linkStyles}
+                           onClick={handleLinkClick}
+                        >
                            <HStack spacing={2}>
                               <Icon as={item.icon} />
                               <Box>{item.label}</Box>
