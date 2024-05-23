@@ -14,13 +14,20 @@ const Navbar = () => {
       display: 'flex',
       alignItems: 'center',
       letterSpacing: '2px',
-      flex: '1'
+      flex: '1',
+      fontSize:{
+         base:'10px',
+         md:'18px'
+      }
    }
    
    const sStyles = {
       color: theme.colors.accent.light,
       fontWeight: '900',
-      fontSize: '35px'
+      fontSize: {
+         base:"20px",
+         md:"34px"
+      }
    }
 
    const handleLogout = () => {
@@ -47,13 +54,14 @@ const Navbar = () => {
             <Avatar name='simon kamau gatuma' src={simon} objectFit='cover' bg={theme.colors.accent.light}>
                <AvatarBadge bg='teal' boxSize='1.2em' />
             </Avatar>
-            <Button bg={theme.colors.accent.light} color={textStyles.color} onClick={handleLogout}>
+            <Button display ={{base:'none',md:"block"}}bg={theme.colors.accent.light} color={textStyles.color} onClick={handleLogout}>
                Logout
             </Button>
             <IconButton
                aria-label='Toggle color mode'
                icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                onClick={toggleColorMode}
+               
                bg={theme.colors.accent.light}
                color={textStyles.color}
             />

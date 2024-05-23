@@ -68,16 +68,19 @@ const Sidebar = () => {
 
    return (
       <>
-         <IconButton
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            display={{ base: 'block', md: 'none' }}
-            position="fixed"
-            top="20px"
-            bg={isDark ? "orange.400": 'orange.400'}
-            left="120px"
-            onClick={() => setIsOpen(!isOpen)}
-            zIndex={1000}
-         />
+       <IconButton
+      icon={isOpen ? <CloseIcon boxSize="20px" /> : <HamburgerIcon boxSize="20px" />}
+      display={{ base: 'block', md: 'none' }}
+      position="fixed"
+      top="20px"
+      bg={isDark ? "none" : 'none'}
+      color={'white'}
+      left="90px"
+      w={{ base: "20px" }} 
+      h={{ base: "30px" }} 
+      onClick={() => setIsOpen(!isOpen)}
+      zIndex={1000}
+    />
          <Box sx={{ ...navigationStyles, display: isOpen ? 'block' : displayMode }}>
             <Box>
                <List>
