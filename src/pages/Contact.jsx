@@ -58,7 +58,7 @@ const Contact = () => {
       </Text>
       <Box mb='10px' display='flex' justifyContent='center'>
        <HStack spacing={4} mt={6} justifyContent=''>
-        <Link href='https://wa.me/+254726613449' isExternal>
+        <Link href='https://wa.me/+254759717794' isExternal>
           <IconButton
             icon={<FaWhatsapp />}
             // aria-label='WhatsApp'

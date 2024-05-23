@@ -47,7 +47,7 @@ const Navbar = () => {
          width='100%'
          zIndex='1000'
       >
-         <Box sx={textStyles}>
+         <Box sx={textStyles} onClick={handleLogout}>
             <Text sx={sStyles}>S</Text>
             <Text sx={sStyles}>K</Text>
             <Text>amau</Text>
