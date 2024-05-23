@@ -88,33 +88,33 @@ const About = () => {
                 <CardBody>
                   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                     <Stack spacing={3}>
-                      <Flex alignItems="center" bg='orange.400' p='10px' gap='1rem'>
+                      <Flex alignItems="center"  p='10px' gap='1rem'>
                         <Icon as={FaJs} boxSize={6} />
                         <Text  >JavaScript</Text>
                       </Flex>
-                      <Flex p='10px' bg='orange.400'alignItems="center"gap='1rem'>
+                      <Flex p='10px' alignItems="center"gap='1rem'>
                         <Icon as={FaNodeJs} boxSize={6} />
                         <Text  >Express</Text>
                       </Flex>
-                      <Flex p='10px' bg='orange.400'alignItems="center"gap='1rem'>
+                      <Flex p='10px' alignItems="center"gap='1rem'>
                         <Icon as={FaReact} boxSize={6} />
                         <Text  >React</Text>
                       </Flex>
                     </Stack>
                     <Stack spacing={3}>
-                      <Flex p='10px'  bg='orange.400'alignItems="center"gap='1rem'>
+                      <Flex p='10px'  alignItems="center"gap='1rem'>
                         <Icon as={FaHtml5} boxSize={6} />
                         <Text >HTML</Text>
                       </Flex>
-                      <Flex p='10px'  bg='orange.400' alignItems="center"gap='1rem'>
+                      <Flex p='10px'  alignItems="center"gap='1rem'>
                         <Icon as={FaCss3Alt} boxSize={6} />
                         <Text >CSS/SCSS</Text>
                       </Flex>
-                      <Flex p='10px' bg='orange.400'alignItems="center"gap='1rem'>
+                      <Flex p='10px' alignItems="center"gap='1rem'>
                         <Icon as={FaGit} boxSize={6} />
                         <Text  >Git</Text>
                       </Flex>
-                      <Flex p='10px' bg='orange.400'alignItems="center"gap='1rem'>
+                      <Flex p='10px' alignItems="center"gap='1rem'>
                         <Icon as={FaDocker} boxSize={6} />
                         <Text  >Docker</Text>
                       </Flex>
