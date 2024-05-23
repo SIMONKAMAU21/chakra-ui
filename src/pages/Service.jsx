@@ -7,34 +7,43 @@ import {
   Card,
   CardHeader,
   CardBody,
+  Icon,
   useColorMode,
-  useColorModeValue
+  useColorModeValue,
+  HStack
 } from '@chakra-ui/react';
+import { FaCode, FaMobileAlt, FaPalette, FaSearch, FaBullhorn, FaCloud } from 'react-icons/fa';
 
 const services = [
   {
     title: 'Web Development',
-    description: 'Building responsive and modern web applications.'
+    description: 'Building responsive and modern web applications.',
+    icon: FaCode
   },
   {
     title: 'Mobile Development',
-    description: 'Creating mobile applications for Android and iOS platforms.'
+    description: 'Creating mobile applications for Android and iOS platforms.',
+    icon: FaMobileAlt
   },
   {
     title: 'UI/UX Design',
-    description: 'Designing user-friendly and aesthetically pleasing interfaces.'
+    description: 'Designing user-friendly and aesthetically pleasing interfaces.',
+    icon: FaPalette
   },
   {
     title: 'SEO Optimization',
-    description: 'Improving website visibility on search engines.'
+    description: 'Improving website visibility on search engines.',
+    icon: FaSearch
   },
   {
     title: 'Digital Marketing',
-    description: 'Creating and managing digital marketing campaigns.'
+    description: 'Creating and managing digital marketing campaigns.',
+    icon: FaBullhorn
   },
   {
     title: 'Cloud Solutions',
-    description: 'Providing cloud infrastructure and services.'
+    description: 'Providing cloud infrastructure and services.',
+    icon: FaCloud
   }
 ];
 
@@ -52,10 +61,14 @@ const Service = () => {
       <SimpleGrid columns={[1, 2, 3]} spacing={8}>
         {services.map((service, index) => (
           <Card key={index} bg={cardBg} boxShadow="md" borderRadius="md">
-            <CardHeader>
-              <Heading as="h3" size="md" color={textColor}>
+            <CardHeader display="flex" alignItems="center">
+            <Box display='flex' justifyContent='space-between' w='100%' >
+            <Heading as="h3" size="md" color={textColor}>
                 {service.title}
               </Heading>
+              <Icon as={service.icon} boxSize={6} mr={2} color={textColor} />
+             
+            </Box>
             </CardHeader>
             <CardBody>
               <Text>{service.description}</Text>
