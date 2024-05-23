@@ -51,7 +51,7 @@ const About = () => {
   };
 
   return (
-    <Box h='100vh' w={{ base: '100vw', md: '80vw' }} p={4} overflowY='auto'>
+    <Box h='100vh' w={{ base: '95vw', md: '80vw' }}  overflowY='auto'>
       <Tabs isFitted variant="enclosed">
         <TabList mb="1em">
           <Tab _selected={{ color: 'white', bg: 'blue.500' }}>About</Tab>
@@ -59,8 +59,8 @@ const About = () => {
         </TabList>
 
         <TabPanels>
-          <TabPanel>
-            <VStack spacing={6}>
+          <TabPanel >
+            <VStack alignItems='center' spacing={6}>
               <Card w='100%' boxShadow='lg'>
                 <CardHeader>
                   <Heading sx={headingStyles}>
