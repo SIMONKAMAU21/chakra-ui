@@ -52,7 +52,7 @@ const Navbar = () => {
          </Box>
          <HStack>
             <Avatar name='simon kamau gatuma' src={simon} objectFit='cover' bg={theme.colors.accent.light}>
-               <AvatarBadge bg='teal' boxSize='1.2em' />
+               <AvatarBadge bg='teal' boxSize={{base:"30px", md:'1.2em'}} />
             </Avatar>
             <Button display ={{base:'none',md:"block"}}bg={theme.colors.accent.light} color={textStyles.color} onClick={handleLogout}>
                Logout
@@ -61,8 +61,9 @@ const Navbar = () => {
                aria-label='Toggle color mode'
                icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                onClick={toggleColorMode}
-               
-               bg={theme.colors.accent.light}
+               w={{base:'40px'}}
+               h={{base:"40px"}}
+               bg={"none"}
                color={textStyles.color}
             />
          </HStack>
