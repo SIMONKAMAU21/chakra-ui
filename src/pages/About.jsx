@@ -20,8 +20,10 @@ import {
   Badge,
   SimpleGrid,
   Divider,
+  Icon,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { FaJs, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGit, FaDocker } from 'react-icons/fa';
 import simon from '../assets/simo.jpg';
 
 const MotionBox = motion(Box);
@@ -86,18 +88,36 @@ const About = () => {
                 <CardBody>
                   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                     <Stack spacing={3}>
-                      <Badge bg='orange.400'>JavaScript</Badge>
-                      <Badge bg='orange.400'>Node.js</Badge>
-                      <Badge bg='orange.400'>Express</Badge>
-                      <Badge bg='orange.400'>React</Badge>
-                      <Badge bg='orange.400'>MongoDB</Badge>
+                      <Flex alignItems="center" bg='orange.400' p='10px' gap='1rem'>
+                        <Icon as={FaJs} boxSize={6} />
+                        <Text  >JavaScript</Text>
+                      </Flex>
+                      <Flex p='10px' bg='orange.400'alignItems="center"gap='1rem'>
+                        <Icon as={FaNodeJs} boxSize={6} />
+                        <Text  >Express</Text>
+                      </Flex>
+                      <Flex p='10px' bg='orange.400'alignItems="center"gap='1rem'>
+                        <Icon as={FaReact} boxSize={6} />
+                        <Text  >React</Text>
+                      </Flex>
                     </Stack>
                     <Stack spacing={3}>
-                      <Badge bg='orange.400'>HTML</Badge>
-                      <Badge bg='orange.400'>CSS</Badge>
-                      <Badge bg='orange.400'>Chakra UI</Badge>
-                      <Badge bg='orange.400'>Git</Badge>
-                      <Badge bg='orange.400'>Docker</Badge>
+                      <Flex p='10px'  bg='orange.400'alignItems="center"gap='1rem'>
+                        <Icon as={FaHtml5} boxSize={6} />
+                        <Text >HTML</Text>
+                      </Flex>
+                      <Flex p='10px'  bg='orange.400' alignItems="center"gap='1rem'>
+                        <Icon as={FaCss3Alt} boxSize={6} />
+                        <Text >CSS/SCSS</Text>
+                      </Flex>
+                      <Flex p='10px' bg='orange.400'alignItems="center"gap='1rem'>
+                        <Icon as={FaGit} boxSize={6} />
+                        <Text  >Git</Text>
+                      </Flex>
+                      <Flex p='10px' bg='orange.400'alignItems="center"gap='1rem'>
+                        <Icon as={FaDocker} boxSize={6} />
+                        <Text  >Docker</Text>
+                      </Flex>
                     </Stack>
                   </SimpleGrid>
                 </CardBody>
@@ -161,6 +181,8 @@ const About = () => {
             </Card>
           </TabPanel>
         </TabPanels>
+     
+
       </Tabs>
     </Box>
   );

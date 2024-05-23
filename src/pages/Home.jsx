@@ -21,7 +21,7 @@ const MotionImage = motion(Image);
 const Home = () => {
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
-  const bgGradient = useColorModeValue('linear(to-r, teal.500, green.500)', 'linear(to-r, teal.200, green.200)');
+  const bgGradient = useColorModeValue('linear(to-r, blue.900, orange.500)', 'linear(to-r, orange.400, blue.400)');
 
   return (
     <Box
@@ -44,39 +44,46 @@ const Home = () => {
         bgGradient='rgba(0, 0, 0, 0.6)'
       ></Box>
       <MotionBox
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 2 }}
         zIndex='1'
         textAlign='center'
-        color='white'
+        justifyContent='center'
+        alignItems='center' 
       >
+
+          
         <MotionImage
           borderRadius='full'
           boxSize={{ base: '200px', md: '300px' }}
           src={simon}
           alt='Simon Kamau'
           mb={4}
+          ml='20%'
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
         />
-        <Heading as='h1' size='2xl' bgGradient={bgGradient} bgClip='text'>
-          Simon Kamau
-        </Heading>
-        <Text fontSize='lg' mt={4} maxW='600px'>
-          Full Stack Developer passionate about creating interactive applications and experiences on the web.
-        </Text>
-        <HStack spacing='20px' mt={4}>
-          <Link href="https://github.com" isExternal>
-            <IconButton icon={<FaGithub />} aria-label="GitHub" variant='outline' colorScheme='teal' />
-          </Link>
-          <Link href="https://linkedin.com" isExternal>
-            <IconButton icon={<FaLinkedin />} aria-label="LinkedIn" variant='outline' colorScheme='teal' />
-          </Link>
-          <Link href="mailto:simogatuma21@gmail.com">
-            <IconButton icon={<FaEnvelope />} aria-label="Email" variant='outline' colorScheme='teal' />
-          </Link>
-        </HStack>
+        <VStack spacing={4} align="center">
+          <Heading as='h1' size='2xl' bgGradient={bgGradient} bgClip='text'>
+            Simon Kamau
+          </Heading>
+          <Text fontSize='lg' maxW='600px' fontWeight='bold'>
+            Full Stack Developer passionate about creating interactive applications and experiences on the web.
+          </Text>
+          <HStack spacing='20px' mt={4}>
+            <Link href="https://github.com" isExternal>
+              <IconButton icon={<FaGithub />} aria-label="GitHub" variant='outline' colorScheme='teal' />
+            </Link>
+            <Link href="https://linkedin.com" isExternal>
+              <IconButton icon={<FaLinkedin />} aria-label="LinkedIn" variant='outline' colorScheme='teal' />
+            </Link>
+            <Link href="mailto:simogatuma21@gmail.com">
+              <IconButton icon={<FaEnvelope />} aria-label="Email" variant='outline' colorScheme='teal' />
+            </Link>
+          </HStack>
+        </VStack>
+
       </MotionBox>
     </Box>
   );
