@@ -18,7 +18,8 @@ const Navbar = () => {
       fontSize:{
          base:'10px',
          md:'18px'
-      }
+      },
+    
    }
    
    const sStyles = {
@@ -42,6 +43,7 @@ const Navbar = () => {
          justifyContent='space-between'
          position='fixed'
          top={0}
+         boxShadow={{ base: '0px 4px 6px rgba(0, 0, 0, 0.5)', md: 'none' }}
          width='100%'
          zIndex='1000'
       >

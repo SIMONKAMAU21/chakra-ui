@@ -51,7 +51,7 @@ const Contact = () => {
 <>
 <Box w={{ base: '100vw', md: '80vw', lg: '60vw' }} mx='auto' p={6} mt={4} borderWidth={1} borderRadius='lg' boxShadow='lg'>
       <Heading as='h1' size='xl' textAlign='center' mb={6}>
-        Contact Us
+        Contact Me
       </Heading>
       <Text fontSize='lg' textAlign='center' mb={6}>
         We would love to hear from you! Please fill out the form below to get in touch.

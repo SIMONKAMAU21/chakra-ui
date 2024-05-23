@@ -47,7 +47,7 @@ const Service = () => {
   return (
     <Box p={8} w={{ base: '100vw', md: '90vw', lg: '80vw' }} mx="auto">
       <Heading as="h1" mb={8} textAlign="center" color={textColor}>
-        Our Services
+        My Services
       </Heading>
       <SimpleGrid columns={[1, 2, 3]} spacing={8}>
         {services.map((service, index) => (
