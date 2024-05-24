@@ -17,19 +17,21 @@ import {
   Text,
   VStack,
   Stack,
-  Badge,
   SimpleGrid,
   Divider,
   Icon,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { FaJs, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGit, FaDocker } from 'react-icons/fa';
 import simon from '../assets/simo.jpg';
+import { localImages } from '../utils/imageUtils';
 
 const MotionBox = motion(Box);
 const MotionImage = motion(Image);
 
 const About = () => {
+  const grey=useColorModeValue('blue.400','orange.400')
   const headingStyles = {
     fontSize: {
       base: '20px',
@@ -51,7 +53,7 @@ const About = () => {
     whileHover: { scale: 1.05 },
     transition: { duration: 0.3 }
   };
-
+const kamau =localImages()
   return (
     <Box h='100vh' w={{ base: '95vw', md: '80vw' }}  overflowY='auto'>
       <Tabs isFitted variant="enclosed">
@@ -89,33 +91,37 @@ const About = () => {
                   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                     <Stack spacing={3}>
                       <Flex alignItems="center"  p='10px' gap='1rem'>
-                        <Icon as={FaJs} boxSize={6} />
+                        <Icon color={grey} as={FaJs} boxSize={6}  />
                         <Text  >JavaScript</Text>
                       </Flex>
                       <Flex p='10px' alignItems="center"gap='1rem'>
-                        <Icon as={FaNodeJs} boxSize={6} />
+                        <Icon color={grey} as={FaNodeJs} boxSize={6} />
                         <Text  >Express</Text>
                       </Flex>
                       <Flex p='10px' alignItems="center"gap='1rem'>
-                        <Icon as={FaReact} boxSize={6} />
+                        <Icon color={grey} as={FaReact} boxSize={6} />
                         <Text  >React</Text>
                       </Flex>
                     </Stack>
                     <Stack spacing={3}>
                       <Flex p='10px'  alignItems="center"gap='1rem'>
-                        <Icon as={FaHtml5} boxSize={6} />
+                        <Icon color={grey} as={FaHtml5} boxSize={6} />
                         <Text >HTML</Text>
                       </Flex>
                       <Flex p='10px'  alignItems="center"gap='1rem'>
-                        <Icon as={FaCss3Alt} boxSize={6} />
+                        <Icon color={grey}as={FaCss3Alt} boxSize={6} />
                         <Text >CSS/SCSS</Text>
                       </Flex>
+                      <Flex p='10px'  alignItems="center"gap='1rem'>
+                        <Icon color={grey} as={FaCss3Alt} boxSize={6} />
+                        <Text >Chakra Ui</Text>
+                      </Flex>
                       <Flex p='10px' alignItems="center"gap='1rem'>
-                        <Icon as={FaGit} boxSize={6} />
+                        <Icon color={grey} as={FaGit} boxSize={6} />
                         <Text  >Git</Text>
                       </Flex>
                       <Flex p='10px' alignItems="center"gap='1rem'>
-                        <Icon as={FaDocker} boxSize={6} />
+                        <Icon color={grey} as={FaDocker} boxSize={6} />
                         <Text  >Docker</Text>
                       </Flex>
                     </Stack>
@@ -151,15 +157,23 @@ const About = () => {
 
               <Card w='100%' boxShadow='lg'>
                 <CardHeader>
-                  <Heading sx={headingStyles}>
+                  <Heading  sx={headingStyles}>
                     Blog Preview
                   </Heading>
                 </CardHeader>
                 <CardBody>
                   <Flex flexDirection={{ base: 'column', md: 'row' }} gap='10px'>
-                    <MotionImage src='https://picsum.photos/200/300?random=1' alt='Blog 1' sx={imageStyles} />
+                    <MotionImage src={kamau[0]} alt='Blog 1' sx={imageStyles} />
                     <Text fontSize='lg'>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam dolorem aliquam sed voluptatibus minima quia neque odit iusto molestiae. Minus!
+                      Exploring the intricacies of modern web development, I delve into the latest trends and technologies that are shaping the industry. From JavaScript frameworks to the nuances of responsive design, join me as I share insights and experiences from my journey as a developer.
+                    </Text>
+                  </Flex>
+                </CardBody>
+                <CardBody>
+                  <Flex flexDirection={{ base: 'column', md: 'row' }} gap='10px'>
+                    <MotionImage src={kamau[1]} alt='Blog 2' sx={imageStyles} />
+                    <Text fontSize='lg'>
+                      In this post, I discuss the importance of maintaining a healthy work-life balance as a developer. Balancing the demands of coding and personal life can be challenging, but with the right strategies, it's possible to achieve harmony and prevent burnout.
                     </Text>
                   </Flex>
                 </CardBody>
@@ -175,7 +189,7 @@ const About = () => {
                 </Text>
               </CardHeader>
               <CardBody>
-                <MotionImage src='https://picsum.photos/200/300?random=5' alt='image 5' sx={imageStyles} />
+                <MotionImage src={kamau[2]} alt='image 5' sx={imageStyles} />
               </CardBody>
               <CardFooter />
             </Card>
