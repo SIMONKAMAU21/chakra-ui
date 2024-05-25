@@ -53,11 +53,11 @@ const Service = () => {
   const textColor = useColorModeValue('blue.600', 'orange.400');
 
   return (
-    <Box p='5px' w={{ base: '90vw', md: '90vw', lg: '80vw' }} mx="auto">
+    <Box p='5px' w={{ base: '90vw', md: '90vw', lg: '75vw' }} mx="auto">
       <Heading as="h1" mb={8} textAlign="center" color={textColor}>
         My Services
       </Heading>
-      <SimpleGrid columns={[1, 2, 3]} spacing={8}>
+      <SimpleGrid columns={[1, 2, 3]} spacing={6}>
         {services.map((service, index) => (
           <Card key={index} bg={cardBg} boxShadow="md" borderRadius="md">
             <CardHeader display="flex" alignItems="center">

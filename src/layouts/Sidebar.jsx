@@ -10,10 +10,8 @@ const Sidebar = () => {
    const isDark = colorMode === 'dark';
    const [isOpen, setIsOpen] = useState(false);
    const location = useLocation();
-
    const displayMode = useBreakpointValue({ base: 'none', md: 'block' });
    const sidebarWidth = useBreakpointValue({ base: '70%', md: '20%' });
-
    const navigationStyles = {
       position: 'fixed',
       top: 0,
@@ -51,7 +49,7 @@ const Sidebar = () => {
       { to: '/about', label: 'About', icon: InfoIcon },
       { to: '/services', label: 'Services', icon: SettingsIcon },
       { to: '/contact', label: 'Contact', icon: EmailIcon },
-      { to: '/portfolio', label: 'Portfolio', icon: StarIcon }
+      { to: '/portfolio', label: 'Portfolio', icon: StarIcon },
    ];
 
    const filterItems = navItems.filter(item => item.label.toLowerCase().includes(searchQuery.toLowerCase()));

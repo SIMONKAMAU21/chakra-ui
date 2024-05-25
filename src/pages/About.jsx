@@ -21,41 +21,83 @@ import {
   Divider,
   Icon,
   useColorModeValue,
+  Button,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { FaJs, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGit, FaDocker } from 'react-icons/fa';
 import simon from '../assets/simo.jpg';
 import { localImages } from '../utils/imageUtils';
+import { Link } from 'react-router-dom';
 
 const MotionBox = motion(Box);
 const MotionImage = motion(Image);
 
 const About = () => {
-  const grey=useColorModeValue('blue.400','orange.400')
+  const grey = useColorModeValue('blue.400', 'orange.400');
   const headingStyles = {
-    fontSize: {
-      base: '20px',
-      md: '22px',
-      lg: '24px'
-    },
+    fontSize: { base: '20px', md: '22px', lg: '24px' },
     textAlign: 'center',
-    w: '100%'
+    w: '100%',
   };
 
   const imageStyles = {
-    w: {
-      base: '100%',
-      md: '45%'
-    },
+    w: { base: '100%', md: '45%' },
     h: 'auto',
     objectFit: 'cover',
     borderRadius: 'md',
     whileHover: { scale: 1.05 },
-    transition: { duration: 0.3 }
+    transition: { duration: 0.3 },
   };
-const kamau =localImages()
+
+  
+
+  const kamau = localImages();
+
+  const skills = [
+    { icon: FaJs, label: 'JavaScript' },
+    { icon: FaNodeJs, label: 'Express' },
+    { icon: FaReact, label: 'React' },
+    { icon: FaHtml5, label: 'HTML' },
+    { icon: FaCss3Alt, label: 'CSS/SCSS' },
+    { icon: FaCss3Alt, label: 'Chakra UI' },
+    { icon: FaGit, label: 'Git' },
+    { icon: FaDocker, label: 'Docker' },
+  ];
+
+  const projects = [
+    {
+      title: 'Project 1',
+      description: 'A brief description of the project. Highlight key features, technologies used, and the impact it had.',
+      links: {
+        github: 'https://github.com/SIMONKAMAU21/To-do-App.git',
+        live: 'https://to-do-app-git-main-simonkamau21s-projects.vercel.app/',
+      },
+    },
+    {
+      title: 'Project 2',
+      description: 'A brief description of the project. Highlight key features, technologies used, and the impact it had.',
+      links: {
+        github: 'https://github.com/SIMONKAMAU21/Hiphonic_Client_React.git',
+        live: 'https://to-do-app-git-main-simonkamau21s-projects.vercel.app/',
+      },
+    },
+  ];
+
+  const blogPreviews = [
+    {
+      image: kamau[0],
+      alt: 'Blog 1',
+      text: 'Exploring the intricacies of modern web development, I delve into the latest trends and technologies that are shaping the industry. From JavaScript frameworks to the nuances of responsive design, join me as I share insights and experiences from my journey as a developer.',
+    },
+    {
+      image: kamau[1],
+      alt: 'Blog 2',
+      text: 'In this post, I discuss the importance of maintaining a healthy work-life balance as a developer. Balancing the demands of coding and personal life can be challenging, but with the right strategies, it\'s possible to achieve harmony and prevent burnout.',
+    },
+  ];
+
   return (
-    <Box h='100vh' w={{ base: '95vw', md: '80vw' }}  overflowY='auto'>
+    <Box h='100vh' w={{ base: '95vw', md: '80vw' }} overflowY='auto'>
       <Tabs isFitted variant="enclosed">
         <TabList mb="1em">
           <Tab _selected={{ color: 'white', bg: 'blue.500' }}>About</Tab>
@@ -63,13 +105,11 @@ const kamau =localImages()
         </TabList>
 
         <TabPanels>
-          <TabPanel >
+          <TabPanel>
             <VStack alignItems='center' spacing={6}>
               <Card w='100%' boxShadow='lg'>
                 <CardHeader>
-                  <Heading sx={headingStyles}>
-                    About Me
-                  </Heading>
+                  <Heading sx={headingStyles}>About Me</Heading>
                 </CardHeader>
                 <CardBody>
                   <Flex flexDirection={{ base: 'column', md: 'row' }} alignItems='center' gap='10px'>
@@ -83,72 +123,40 @@ const kamau =localImages()
 
               <Card w='100%' boxShadow='lg'>
                 <CardHeader>
-                  <Heading sx={headingStyles}>
-                    Skills
-                  </Heading>
+                  <Heading sx={headingStyles}>Skills</Heading>
                 </CardHeader>
                 <CardBody>
                   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                    <Stack spacing={3}>
-                      <Flex alignItems="center"  p='10px' gap='1rem'>
-                        <Icon color={grey} as={FaJs} boxSize={6}  />
-                        <Text  >JavaScript</Text>
+                    {skills.map((skill, index) => (
+                      <Flex key={index} p='10px' alignItems='center' gap='1rem'>
+                        <Icon color={grey} as={skill.icon} boxSize={6} />
+                        <Text>{skill.label}</Text>
                       </Flex>
-                      <Flex p='10px' alignItems="center"gap='1rem'>
-                        <Icon color={grey} as={FaNodeJs} boxSize={6} />
-                        <Text  >Express</Text>
-                      </Flex>
-                      <Flex p='10px' alignItems="center"gap='1rem'>
-                        <Icon color={grey} as={FaReact} boxSize={6} />
-                        <Text  >React</Text>
-                      </Flex>
-                    </Stack>
-                    <Stack spacing={3}>
-                      <Flex p='10px'  alignItems="center"gap='1rem'>
-                        <Icon color={grey} as={FaHtml5} boxSize={6} />
-                        <Text >HTML</Text>
-                      </Flex>
-                      <Flex p='10px'  alignItems="center"gap='1rem'>
-                        <Icon color={grey}as={FaCss3Alt} boxSize={6} />
-                        <Text >CSS/SCSS</Text>
-                      </Flex>
-                      <Flex p='10px'  alignItems="center"gap='1rem'>
-                        <Icon color={grey} as={FaCss3Alt} boxSize={6} />
-                        <Text >Chakra Ui</Text>
-                      </Flex>
-                      <Flex p='10px' alignItems="center"gap='1rem'>
-                        <Icon color={grey} as={FaGit} boxSize={6} />
-                        <Text  >Git</Text>
-                      </Flex>
-                      <Flex p='10px' alignItems="center"gap='1rem'>
-                        <Icon color={grey} as={FaDocker} boxSize={6} />
-                        <Text  >Docker</Text>
-                      </Flex>
-                    </Stack>
+                    ))}
                   </SimpleGrid>
                 </CardBody>
               </Card>
 
               <Card w='100%' boxShadow='lg'>
                 <CardHeader>
-                  <Heading sx={headingStyles}>
-                    Projects
-                  </Heading>
+                  <Heading sx={headingStyles}>Projects</Heading>
                 </CardHeader>
                 <CardBody>
                   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                    <Box>
-                      <Heading size='md'>Project 1</Heading>
-                      <Text mt={2}>
-                        A brief description of the project. Highlight key features, technologies used, and the impact it had.
-                      </Text>
-                    </Box>
-                    <Box>
-                      <Heading size='md'>Project 2</Heading>
-                      <Text mt={2}>
-                        A brief description of the project. Highlight key features, technologies used, and the impact it had.
-                      </Text>
-                    </Box>
+                    {projects.map((project, index) => (
+                      <Box key={index}>
+                        <Heading size='md'>{project.title}</Heading>
+                        <Text mt={2}>{project.description}</Text>
+                        {project.links && (
+                          <Flex mt={2} gap='1rem'>
+                            <Button>
+                              <Link to={project.links.github} >GitHub</Link>
+                            </Button>
+                            <Button><Link to={project.links.live} >Live Demo</Link></Button>
+                          </Flex>
+                        )}
+                      </Box>
+                    ))}
                   </SimpleGrid>
                 </CardBody>
               </Card>
@@ -157,26 +165,16 @@ const kamau =localImages()
 
               <Card w='100%' boxShadow='lg'>
                 <CardHeader>
-                  <Heading  sx={headingStyles}>
-                    Blog Preview
-                  </Heading>
+                  <Heading sx={headingStyles}>Blog Preview</Heading>
                 </CardHeader>
-                <CardBody>
-                  <Flex flexDirection={{ base: 'column', md: 'row' }} gap='10px'>
-                    <MotionImage src={kamau[0]} alt='Blog 1' sx={imageStyles} />
-                    <Text fontSize='lg'>
-                      Exploring the intricacies of modern web development, I delve into the latest trends and technologies that are shaping the industry. From JavaScript frameworks to the nuances of responsive design, join me as I share insights and experiences from my journey as a developer.
-                    </Text>
-                  </Flex>
-                </CardBody>
-                <CardBody>
-                  <Flex flexDirection={{ base: 'column', md: 'row' }} gap='10px'>
-                    <MotionImage src={kamau[1]} alt='Blog 2' sx={imageStyles} />
-                    <Text fontSize='lg'>
-                      In this post, I discuss the importance of maintaining a healthy work-life balance as a developer. Balancing the demands of coding and personal life can be challenging, but with the right strategies, it's possible to achieve harmony and prevent burnout.
-                    </Text>
-                  </Flex>
-                </CardBody>
+                {blogPreviews.map((blog, index) => (
+                  <CardBody key={index}>
+                    <Flex flexDirection={{ base: 'column', md: 'row' }} gap='10px'>
+                      <MotionImage src={blog.image} alt={blog.alt} sx={imageStyles} />
+                      <Text fontSize='lg'>{blog.text}</Text>
+                    </Flex>
+                  </CardBody>
+                ))}
               </Card>
             </VStack>
           </TabPanel>
@@ -195,8 +193,6 @@ const kamau =localImages()
             </Card>
           </TabPanel>
         </TabPanels>
-     
-
       </Tabs>
     </Box>
   );

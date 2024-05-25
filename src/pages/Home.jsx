@@ -7,22 +7,25 @@ import {
   VStack,
   Heading,
   HStack,
-  Link,
-  IconButton,
   useColorModeValue,
+  Button,
 } from '@chakra-ui/react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import simon from '../assets/simo.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const MotionBox = motion(Box);
 const MotionImage = motion(Image);
 
 const Home = () => {
+  const navigate = useNavigate()
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
   const bgGradient = useColorModeValue('linear(to-r, blue.900, orange.500)', 'linear(to-r, orange.400, blue.400)');
-
+  const button = useColorModeValue('orange.400', 'blue.400')
+  const handleContact = () => {
+    navigate('/contact')
+  }
   return (
     <Box
       position='relative'
@@ -50,10 +53,10 @@ const Home = () => {
         zIndex='1'
         textAlign='center'
         justifyContent='center'
-        alignItems='center' 
+        alignItems='center'
       >
 
-          
+
         <MotionImage
           borderRadius='full'
           boxSize={{ base: '200px', md: '300px' }}
@@ -72,15 +75,8 @@ const Home = () => {
             Full Stack Developer passionate about creating interactive applications and experiences on the web.
           </Text>
           <HStack spacing='20px' mt={4}>
-            <Link href="https://github.com" isExternal>
-              <IconButton icon={<FaGithub />} aria-label="GitHub" variant='outline' colorScheme='teal' />
-            </Link>
-            <Link href="https://linkedin.com" isExternal>
-              <IconButton icon={<FaLinkedin />} aria-label="LinkedIn" variant='outline' colorScheme='teal' />
-            </Link>
-            <Link href="mailto:simogatuma21@gmail.com">
-              <IconButton icon={<FaEnvelope />} aria-label="Email" variant='outline' colorScheme='teal' />
-            </Link>
+            <Button bg={button} border='1px solid gray' onClick={handleContact}>contact</Button>
+            <Button bg='none' border='1px solid gray'>Download Cv</Button>
           </HStack>
         </VStack>
 
