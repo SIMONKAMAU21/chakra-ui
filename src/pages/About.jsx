@@ -22,10 +22,12 @@ import {
   Icon,
   useColorModeValue,
   Button,
+  HStack,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { FaJs, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGit, FaDocker } from 'react-icons/fa';
 import simon from '../assets/simo.jpg';
+import project from '../assets/Screenshot (6).png'
 import { localImages } from '../utils/imageUtils';
 import { Link } from 'react-router-dom';
 
@@ -75,14 +77,14 @@ const About = () => {
     },
     {
       title: 'Project 2',
-      description: 'A brief description of the project. Highlight key features, technologies used, and the impact it had.',
+      description: 'Click to Chat is a convenient tool that allows you to initiate a WhatsApp chat with any phone number without having to save the contact in your phone. This app aims to simplify the process of connecting with people on WhatsApp, especially for one-time conversations.',
+      image:kamau[3],
       links: {
         github: 'https://github.com/SIMONKAMAU21/Hiphonic_Client_React.git',
-        live: 'https://to-do-app-git-main-simonkamau21s-projects.vercel.app/',
+        live: 'https://click-to-chat.vercel.app/',
       },
     },
   ];
-
   const blogPreviews = [
     {
       image: kamau[0],
@@ -143,16 +145,20 @@ const About = () => {
                 </CardHeader>
                 <CardBody>
                   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                    {projects.map((project, index) => (
+                    {projects && projects.map((project, index) => (
                       <Box key={index}>
                         <Heading size='md'>{project.title}</Heading>
+                      <SimpleGrid columns={{base:1 , md:2}} gap='10px'>
+                      <Image src={project.image} alt='project image' sx={imageStyles}/>
+                        <Image src={project.image} alt='project image' sx={imageStyles}/>
+                      </SimpleGrid>
                         <Text mt={2}>{project.description}</Text>
                         {project.links && (
                           <Flex mt={2} gap='1rem'>
-                            <Button>
+                            <Button bg='blue.400'>
                               <Link to={project.links.github} >GitHub</Link>
                             </Button>
-                            <Button><Link to={project.links.live} >Live Demo</Link></Button>
+                            <Button bg='orange.400'><Link to={project.links.live} >Visit</Link></Button>
                           </Flex>
                         )}
                       </Box>
